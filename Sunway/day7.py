@@ -96,3 +96,15 @@
 
 #Write a funtion that takes a string and checks wether that string is a palindrome or not.
 
+def check_palindrome(p):
+    string = ''.join(p.split()).lower()
+    return string == string[::-1]
+
+
+str = input("Enter a string: ")
+result = check_palindrome(str)
+
+if result:
+    print(f"'{str}' is a palindrome.")
+else:
+    print(f"'{str}' is not a palindrome.")
