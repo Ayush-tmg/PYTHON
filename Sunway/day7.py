@@ -49,7 +49,8 @@
 #Take a email and check whether that email address is a gmail address or not.
 
 # def check_email(e):
-#     check = "@gmail.com"
+#     e.split("@")[1]
+#     check = "gmail.com"
 #     if check in e.lower():
 #         print(f"The given email address {e} is a gmail address.")
 #     else:
@@ -59,5 +60,39 @@
 # check_email(email)
 
 #Write a function that takes email and returns wether that email belongs to edu.np or not.
+
+# def check_email(e):
+#     e.split("@")[1]
+#     check = "edu.np"
+#     if check in e.lower():
+#         return True
+#     else:
+#         return False
+
+# email = input("Enter your email: ")
+# result = check_email(email)
+# if result == True:
+#     print(f"The given email address {email} belongs to edu.np.")
+# else:
+#     print(f"The given email address {email} does not belong to edu.np.")
+
+
 #Write a function that takes multiple number of integers and separate the number into two different list even and odd.
-#Write a funtion that takes a string and checks wether that string is a palindrone or not.
+
+# def split_even_odd(args):
+#     even = []
+#     odd = []
+
+#     for item in args:
+#         if item % 2 == 0:
+#             even.append(item)
+#         else:
+#             odd.append(item)
+#     return even, odd
+
+# num = [0,1,2,3,4,5,6,7,8,9,10]
+# result = split_even_odd(num)
+# print(result)
+
+#Write a funtion that takes a string and checks wether that string is a palindrome or not.
+
