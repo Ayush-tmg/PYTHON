@@ -1,3 +1,5 @@
+## Create and Write File ##
+
 f = open('File.txt', 'w')
 f.write("""
 HEloo! My name is Ayush Tamanga.
@@ -21,6 +23,8 @@ for x in f:
 
 f.close()
 
+## Append File ##
+
 f = open('File.txt', 'a')
 
 f.write("Now, the txt has more content.")
@@ -31,6 +35,8 @@ f = open('File.txt', 'r')
 print(f.read())
 f.close()
 
+## Overwrite File ##
+
 f = open('File.txt', 'w')
 f.write("\nOh no! I over wrote the contents.\n")
 f.close()
@@ -39,8 +45,14 @@ f = open('File.txt', 'r')
 print(f.read())
 f.close()
 
+## File Remove ##
+import os
+os.remove("File.txt")
+
+## File not Found ##
+
 try:
-    f = open("abc.txt", "r")
+    f = open("File.txt", "r")
 except FileNotFoundError:
     print("File not found.")
 except:
