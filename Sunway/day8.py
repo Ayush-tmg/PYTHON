@@ -1,4 +1,4 @@
-f = open('/Users/ayushtamang/Documents/Python/Sunway/File.txt', 'w')
+f = open('File.txt', 'w')
 f.write("""
 HEloo! My name is Ayush Tamanga.
 This is File Handling testo.
@@ -8,7 +8,7 @@ Time: 9:01 am.
 """)
 f.close()
 
-f = open('/Users/ayushtamang/Documents/Python/Sunway/File.txt', 'r')
+f = open('File.txt', 'r')
 # print(f.read())
 # print(f.read(5))
 # print(f.readline())
@@ -19,20 +19,20 @@ for x in f:
 
 f.close()
 
-f = open('/Users/ayushtamang/Documents/Python/Sunway/File.txt', 'a')
+f = open('File.txt', 'a')
 
 f.write("Now, the txt has more content.")
 
 f.close()
 
-f = open('/Users/ayushtamang/Documents/Python/Sunway/File.txt', 'r')
+f = open('File.txt', 'r')
 print(f.read())
 f.close()
 
-f = open('/Users/ayushtamang/Documents/Python/Sunway/File.txt', 'w')
+f = open('File.txt', 'w')
 f.write("\nOh no! I over wrote the contents.")
 f.close()
 
-f = open('/Users/ayushtamang/Documents/Python/Sunway/File.txt', 'r')
+f = open('File.txt', 'r')
 print(f.read())
 f.close()
