@@ -1,10 +1,3 @@
-try:
-    f = open("abc.txt", "r")
-except FileNotFoundError:
-    print("File not found.")
-except:
-    print("An error occured.")
-
 f = open('File.txt', 'w')
 f.write("""
 HEloo! My name is Ayush Tamanga.
@@ -39,9 +32,16 @@ print(f.read())
 f.close()
 
 f = open('File.txt', 'w')
-f.write("\nOh no! I over wrote the contents.")
+f.write("\nOh no! I over wrote the contents.\n")
 f.close()
 
 f = open('File.txt', 'r')
 print(f.read())
 f.close()
+
+try:
+    f = open("abc.txt", "r")
+except FileNotFoundError:
+    print("File not found.")
+except:
+    print("An error occured.")
