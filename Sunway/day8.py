@@ -13,6 +13,8 @@ f = open('File.txt', 'r')
 # print(f.read(5))
 # print(f.readline())
 # print(f.readline())
+# print(f.readlines())
+# print(f.readline())
 
 for x in f:
     print(x)
