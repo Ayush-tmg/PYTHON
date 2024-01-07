@@ -1,3 +1,10 @@
+try:
+    f = open("abc.txt", "r")
+except FileNotFoundError:
+    print("File not found.")
+except:
+    print("An error occured.")
+
 f = open('File.txt', 'w')
 f.write("""
 HEloo! My name is Ayush Tamanga.
