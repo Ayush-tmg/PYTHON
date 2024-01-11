@@ -20,9 +20,15 @@
 
 ## Write a lambda function that takes a num and prints whether the num is odd or even
 
-odd_even = lambda n : True if n % 2 == 0 else False
+# odd_even = lambda n : True if n % 2 == 0 else False
+# n = int(input("Enter a num: "))
+# if odd_even(n) == True:
+#     print(f"The given number {n} is even.")
+# else:
+#     print(f"The given number {n} is odd.")
+
+# OR
+    
+odd_even = lambda n : print(f"The given number {n} is even.") if n % 2 == 0 else print(f"The given number {n} is odd.")
 n = int(input("Enter a num: "))
-if odd_even(n) == True:
-    print(f"The given number {n} is even.")
-else:
-    print(f"The given number {n} is odd.")
+odd_even(n)
