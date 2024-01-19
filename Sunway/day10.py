@@ -28,3 +28,5 @@ keyword_list = keyword.kwlist
 user_choice = input("Enter a word: ")
 if user_choice in keyword_list:
     print(f"{user_choice} is a keyword.")
+else:
+    print(f"{user_choice} is not a keyword.")
