@@ -1,33 +1,38 @@
 ######## EXERCISE 1 ########
 
-import math
+print("-------WELCOME TO OUR BANK-------")
 
-def find_prime(n):
-    if n == 1:
-        return True
-    if n == 2:
-        return False
-    
-    s = int(math.sqrt(n))
+user_name = input("Enter your name: ")
+balance = 1000
 
-    for i in range(2, s + 1):
-        if n % i == 0:
-            return False
-    return True
-
-def find_divisor(n):
-    divisors = []
-
-    for i in range(1, n + 1):
-        if n % i  == 0:
-            divisors.append(i)
-    return divisors
-
-num = int(input("Enter a whole number: "))  
-result = find_prime(num)
-
-if result == True:
-    print(f"The number {num} is prime.")
-else:
-    divisor = find_divisor(num)
-    print(f"The divisor of {num} is {divisor}")
+while True: 
+    print("""
+Choose 1 for Deposit 
+Choose 2 for Withdraw 
+Choose 3 for Check Balance 
+Choose Q or q to Exit""")
+    choice = input("\nPlease choose transactions: ")
+    if choice == "1": 
+        deposit_amount = int(input(f"Please! enter the amount {user_name}: "))
+        balance += deposit_amount
+        
+    elif choice == "2":
+       withdraw_amount = int(input(f"Please! enter the amount {user_name}: "))
+       if withdraw_amount < balance:
+           balance -= withdraw_amount
+       else:
+           print(f"{user_name} it is not possible to withdraw beyond the account balance.")
+            
+    elif choice == "3":
+        print(f"{user_name}, you have a total of £{balance} in your account.")
+      
+    elif choice == "Q" or choice == "q":
+        print("""
+-------------------------------------
+| Thanks for choosing us as your bank |
+| Visit us again!                     |
+-------------------------------------
+""")
+        break
+    else:
+        print("Wrong transaction! Try again.")
